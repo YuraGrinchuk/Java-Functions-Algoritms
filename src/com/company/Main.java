@@ -39,6 +39,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scan = new Scanner(System.in);
+
         //loops-------------------------------------------------------------------------------------------------------
 
 //        for(int i = 0; i <=10; ++i){
@@ -85,8 +87,6 @@ public class Main {
 //        pow(2,3);
 
 //        arrayCreator(3);
-        System.out.println(8 <=8);
-
 
         // move all zeros to the end of array
 
@@ -109,35 +109,78 @@ public class Main {
 //            System.out.print(arrin[i]+" ");
 //        }
 
-        //find an average value of an array of integers exept of the largest and the smallest
+        //Write a Java program to replace every element with the next greatest element----------------------------------
+        // (from right side) in an given array of integers.-------------------------------------------------------------
+//
+//        int numberOfElements = scan.nextInt();
+//
+//        int[] arr = new int[numberOfElements];
+//        for (int i = 0; i < numberOfElements; ++i){
+//            arr[i] = scan.nextInt();
+//        }
+//
+//        for (int i = 0; i < numberOfElements - 1; ++i){
+//            if (arr[i] <= arr[i+1]){
+//                arr[i] = arr[i+1];
+//            }
+//        }
+//
+//        for (int i = 0; i <numberOfElements; ++i){
+//            System.out.print(arr[i] + " ");
+//        }
 
-        Scanner scan = new Scanner(System.in);
-        int numberOfArrayItems = scan.nextInt();
-        int [] arrayOfNumbers = new int[numberOfArrayItems];
+        //Write a Java program to remove duplicate elements from an array-----------------------------------------------
 
-        for (int i = 0; i < numberOfArrayItems; ++i){
-            arrayOfNumbers[i] = scan.nextInt();
+//        int numberOfElements = scan.nextInt();
+//
+//        int[] arr = new int[numberOfElements];
+//        for (int i = 0; i <numberOfElements;++i){
+//            arr[i] = scan.nextInt();
+//        }
+//
+//        for (int i = 0; i <numberOfElements; ++i){
+//
+//        }
+
+        //MOVE ALL ZEROS TO THE END OF ARRAY----------------------------------------------------------------------------
+
+//        int numberOfElements = scan.nextInt();
+//
+//        int[] arr = new int[numberOfElements];
+//        for (int i = 0; i <numberOfElements;++i){
+//            arr[i] = scan.nextInt();
+//        }
+//
+//        int counter = 0;
+//
+//        for (int i = 0; i <numberOfElements; ++i){
+//            if (arr[i] != 0){
+//                arr[counter++] = arr[i];
+//            }
+//        }
+//        while (counter<numberOfElements){
+//            arr[counter++] = 0;
+//        }
+//
+//        for (int i = 0; i < numberOfElements; ++i){
+//            System.out.print(arr[i] + " ");
+//        }
+
+        // FIND ALL THE DUPLICATES IN INTEGER ARRAY---------------------------------------------------------------------
+
+        int numberOfElements = scan.nextInt();
+
+        int[] arr = new int[numberOfElements];
+        for (int i = 0; i <numberOfElements;++i){
+            arr[i] = scan.nextInt();
         }
-
-        int min = 0;
-        int max = 0;
-
-        for (int i = 0; i < numberOfArrayItems; ++i){
-            if (arrayOfNumbers[i] < min) {
-                min = arrayOfNumbers[i];
-            }else if (arrayOfNumbers[i] > max)
-                max = arrayOfNumbers[i];
+        for (int i = 0; i < numberOfElements; ++i){
+            for (int j = 0; j <= numberOfElements; ++j){
+                if (arr[i] == arr[j+1]){
+                    System.out.println("Duplicate found : "+ arr[i]);
+                }
+            }
         }
-        int sum = 0;
-        for (int i = 0; i < numberOfArrayItems; ++i){
-            if(arrayOfNumbers[i] != max || arrayOfNumbers[i] != min)
-                sum += arrayOfNumbers[i];
-        }
-        double averageSum = (sum - min - max) / (numberOfArrayItems - 2);
-
-        System.out.print(min +" "+ max +" "+ sum +" "+averageSum);
-
-
 
 
 
