@@ -175,15 +175,18 @@ public class Main {
             arr[i] = scan.nextInt();
         }
         for (int i = 0; i < numberOfElements; ++i){
-            for (int j = 0; j <= numberOfElements; ++j){
-                if (arr[i] == arr[j+1]){
+            for (int j=i+1; j<numberOfElements; ++j){
+                if (arr[i] == arr[j]){
                     System.out.println("Duplicate found : "+ arr[i]);
                 }
+
             }
+        }
+
         }
 
 
 
     }
 
-}
+
