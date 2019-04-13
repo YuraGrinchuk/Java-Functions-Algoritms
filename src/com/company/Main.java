@@ -166,7 +166,7 @@ public class Main {
 //            System.out.print(arr[i] + " ");
 //        }
 
-        // FIND ALL THE DUPLICATES IN INTEGER ARRAY---------------------------------------------------------------------
+        // FIND ALL THE DUPLICATES IN INTEGER ARRAY AND REPLACE DUPLICATES BY 0  ---------------------------------------
 
         int numberOfElements = scan.nextInt();
 
@@ -178,9 +178,14 @@ public class Main {
             for (int j=i+1; j<numberOfElements; ++j){
                 if (arr[i] == arr[j]){
                     System.out.println("Duplicate found : "+ arr[i]);
+                    arr[i] = 0;
                 }
 
             }
+        }
+
+        for (int i = 0; i < numberOfElements; ++i){
+            System.out.print(arr[i] + "  ");
         }
 
         }
